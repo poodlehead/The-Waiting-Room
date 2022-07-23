@@ -1,0 +1,22 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script/chapter1_checkin.rpy", line 5: expected 'image_name_component' not found.
+    show "tom neutral human mask" at right 
+         ^
+
+File "game/script/chapter1_checkin.rpy", line 40: expected 'image_name_component' not found.
+    hide "tom neutral human mask"
+         ^
+
+File "game/script/chapter1_checkin.rpy", line 44: expected 'image_name_component' not found.
+    show "tom neutral human mask" at center 
+         ^
+
+File "game/script/chapter1_checkin.rpy", line 54: expected 'image_name_component' not found.
+    hide "tom neutral human mask" with fade
+         ^
+
+Ren'Py Version: Ren'Py 7.5.1.22070801
+Sat Jul 23 21:04:00 2022
