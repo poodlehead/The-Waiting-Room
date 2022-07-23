@@ -1,50 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 32, in script
-    n "You did say it wasn't over"
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-IOError: Couldn't find file 'tickingclock.mp3'.
+  File "game/script/chapter1_checkin.rpy", line 5, in script
+    show tom neutralhumanmask at right
+Exception: Image 'tom' does not accept attributes 'neutralhumanmask'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 32, in script
-    n "You did say it wasn't over"
-  File "renpy/ast.py", line 689, in execute
-    statement_name(stmt_name)
-  File "renpy/ast.py", line 46, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-  File "renpy/exports.py", line 1684, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "renpy/display/core.py", line 2762, in do_with
-    clear=clear)
-  File "renpy/display/core.py", line 3325, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 4025, in interact_core
-    renpy.audio.audio.periodic()
-  File "renpy/audio/audio.py", line 1162, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "renpy/audio/audio.py", line 1140, in periodic_thread_main
-    periodic_pass()
-  File "renpy/audio/audio.py", line 1082, in periodic_pass
-    c.periodic()
-  File "renpy/audio/audio.py", line 518, in periodic
-    topf = load(filename)
-  File "renpy/audio/audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "renpy/loader.py", line 798, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'tickingclock.mp3'.
+  File "game/script/chapter1_checkin.rpy", line 5, in script
+    show tom neutralhumanmask at right
+  File "renpy/ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1378, in show_imspec
+    atl=atl)
+  File "renpy/exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "renpy/display/image.py", line 413, in find_target
+    self.target = target._duplicate(a)
+  File "renpy/display/core.py", line 397, in _duplicate
+    args.extraneous()
+  File "renpy/display/core.py", line 267, in extraneous
+    " ".join(self.args),
+Exception: Image 'tom' does not accept attributes 'neutralhumanmask'.
 
-Windows-10-10.0.19041
-Ren'Py 7.4.11.2266
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.5.1.22070801
 The Waiting Room 1.0
-Sun Jun 12 23:14:11 2022
+Sat Jul 23 21:16:28 2022
